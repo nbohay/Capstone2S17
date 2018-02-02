@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="http://127.0.0.1/Capstone/form.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>  
+  .ui-autocomplete {
+    max-height: 150px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+    * html .ui-autocomplete {
+    height: 150px;
+  }
+  </style>
+
+</head>
+<body>
+<h2>StockView</h2>
+  <div class="ui-widget">
+<form action="output.cgi" method="POST" name="MYForm"id="#myform" target="frame" >
+<label for="lookup">Lookup Stock: </label>
+<input type="text" id="lookup" name="fullname" size="45" required><br><br>
+<!--<label for="tags">Enter Stock Symbol: </label>
+<input type="text" id="tags" name="stockticker" required ><br><br>-->
+<label for="from">From</label>
+<input type="text" id="from" name="fromdate" required>
+<label for="to">to</label>
+<input type="text" id="to" name="todate" required><br><br>
+<input type="submit" value="Done">
+</form></div>
+<br><p id="demo"></p>
+<div>
+<iframe scrolling="NO" style="border:none; position:absolute; height:1750px; width:99%" name="frame"></iframe></div>
+
+<!-- <div id="div1">
+
+<iframe src="http://127.0.0.1/Capstone/temp-plot.html" style="height:800px; width:75%; border:none;" name="plot" id="plot"></iframe>
+ </div>-->
+</body>
+</html>
